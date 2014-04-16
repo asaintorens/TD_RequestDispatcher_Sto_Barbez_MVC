@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -14,7 +15,12 @@
 </head> 
 <body>
 <p>
-Bienvenue <p style="color:red;" >${empty leUtilisateur.login ? "": leUtilisateur.login}</p> votre inscription a bien été prise en compte le <%= date.format(new java.util.Date()) %> à <%= heure.format(new java.util.Date()) %> .
+Bienvenue <p style="color:red;" >${leUtilisateur.login}</p> votre inscription a bien été prise en compte le
+<%--<%= date.format(new java.util.Date()) %> à <%= heure.format(new java.util.Date()) %> .--%>
+<jsp:useBean id="today" class="java.util.Date" scope="page" />
+<fmt:setLocale value="fr" />
+<fmt:formatDate value="${today}" type="both" />
+
 </p>
 </body>
 </html>
