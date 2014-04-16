@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="TD-DISPATCHEUR:war exploded">
+    <output-path>$PROJECT_DIR$/target/TD-DISPATCHEUR-0.0.1-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="TD-DISPATCHEUR/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="TD-DISPATCHEUR" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
